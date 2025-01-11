@@ -55,7 +55,7 @@ function card_creator(xyzs) {
                 </a>
                 <div class="card_info flex h-[80px] w-full align-middle items-center">
 
-                    <div class="title flex justify-center align-middle items-center text-white text-lg sm:text-sm font-sans font-semibold mx-2">
+                    <div class="title flex justify-center align-middle items-center text-white text-sm md:text-lg font-sans font-semibold mx-2">
                         ${xyz.title}</div>
 
                 </div>
