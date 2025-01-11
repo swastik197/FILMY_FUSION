@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+}
+
+.section1 {
+  /* background-color: rgb(33, 2, 81) */
+  
+  /* background-image: linear-gradient(to bottom, #4a44c9, #007cf3, #00a7f8, #00cbe6, #0cebce); */
+  /* background-image: linear-gradient(to bottom, #210251, #004393, #007cbe, #00b5cf, #0cebce); */
+  /* background-color: rgb(21, 26, 34); */
+  background-color: rgb(27, 39, 43);
+
+}
+.pageination{
+  background-color: rgb(27, 39, 43);
+
+}
+footer{
+  background-color: rgb(27, 39, 43);
+}
+
+/* .intro_text {
+  height: 73vh
+} */
+
+
+
+.Navi {
+  /* background-color: rgb(33, 2, 81) */
+  /* background-image: linear-gradient(to right bottom, #d16ba5, #b194e8, #6cbdff, #11e0ff, #5ffbf1); */
+  background-color: transparent;
+  /* background-image: linear-gradient(to left, #051937, #004d7a, #008793, #00bf72, #a8eb12); */
+  /* background-image: linear-gradient(to left, #051937, #004770, #007c9e, #00b4b8, #12ebbc); */
+}
+
+
+.card {
+  position: relative;
+  /* width: 200px;
+  height: 320px; */
+  width: 39vw;
+  /* background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%); */
+  /* border-radius: 20px; */
+  /* transition: all .3s; */
+  margin: 12px;
+ }
+
+.card_info {
+  /* background-color: rgb(33, 2, 81); */
+  /* background-color:#00a7f8; */
+  background-color: rgb(27, 39, 43);
+  /* transition: all .3s; */
+}
+.vertical_nav {
+  transition: right 0.3s ease-in-out; /* Smooth animation for the right property */
+  background-color: rgb(27, 39, 43);
+}
+
+
+.card:hover {
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+  .rating{
+      display: flex;
+  }
+ 
+  .dt{
+      display: flex;
+  }
+}
+@media (min-width: 548px){
+  .card{
+      width:250px
+  }
+}
+.intro_text{
+  font-family: "Luckiest Guy", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+
+
