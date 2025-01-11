@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="/stylesheets/output.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+
+
+</head>
+
+<body>
+
+    <header style="background-color: rgb(27, 39, 43);">
+        <!-- navigation bar -->
+        <nav
+            class="Navi backdrop-blur-sm sticky top-0 z-10 text-white flex justify-between sm:items-center sm:justify-around">
+
+            <div class="flex h-[34px] w-12 rounded-md m-2"><img src="/images/logo.jpg" class="rounded-md" alt=""></div>
+            <ul class="hidden sm:flex space-x-12 justify-between py-4 px-1">
+                <li><a class="cursor-pointer font-mono text-lg font-bold" href="/">Home</a></li>
+                <li><a class="cursor-pointer font-mono text-lg font-bold" href="/">Geners</a></li>
+                <li><a class="cursor-pointer font-mono text-lg font-bold" href="/">Year</a></li>
+
+            </ul>
+            <form action="" class="hidden sm:flex w-2/6">
+                <input
+                    class="bg-zinc-200 w-full h-8 text-zinc-600 font-mono ring-1 ring-zinc-400 focus:ring-2 focus:ring-purple-500 outline-none duration-300 placeholder:text-zinc-600 placeholder:opacity-50 rounded-full px-4 py-1 shadow-md focus:shadow-lg focus:shadow-purple-500"
+                    autocomplete="off" placeholder="Search Movies" name="text" type="text" />
+            </form>
+
+
+            <button
+                class="hidden sm:flex bg-purple-500 text-white px-4 py-2 rounded-full transition duration-200 ease-in-out hover:bg-purple-700 active:bg-purple-900 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="15px"
+                    fill="#FFFFFF">
+                    <path
+                        d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z" />
+                </svg>
+            </button>
+
+            <button class="menu flex sm:hidden m-2" onclick="openclose_sidenav()">
+                <svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px"
+                    fill="#AAC1F0">
+                    <path d="M144-264v-72h672v72H144Zm0-180v-72h672v72H144Zm0-180v-72h672v72H144Z" />
+                </svg>
+
+            </button>
+            <button class="cross hidden sm:hidden m-2" onclick="openclose_sidenav()">
+                <svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px"
+                    fill="#AAC1F0">
+                    <path
+                        d="m291-240-51-51 189-189-189-189 51-51 189 189 189-189 51 51-189 189 189 189-51 51-189-189-189 189Z" />
+                </svg>
+
+            </button>
+
+
+
+
+        </nav>
+        <!-- vertical navigation bar -->
+        <nav class="vertical_nav hidden sm:hidden flex-col h-1/2 m-1 rounded-lg w-5/6 z-10 absolute right-0 ">
+            <div class="w-full flex justify-between ">
+                <button class="cross h-[34px] m-2" onclick="closeSidenav()">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px"
+                        fill="#AAC1F0">
+                        <path
+                            d="m291-240-51-51 189-189-189-189 51-51 189 189 189-189 51 51-189 189 189 189-51 51-189-189-189 189Z" />
+                    </svg>
+
+                </button>
+                <div class="flex h-[34px] w-12 rounded-md m-2"><img src="/images/logo.jpg" class="rounded-md" alt="">
+                </div>
+            </div>
+            <a class="w-full flex items-center justify-center mt-4">
+                <button
+                    class="flex sm:hidden  bg-purple-500 text-white px-4 py-2 rounded-full transition duration-200 ease-in-out hover:bg-purple-700 active:bg-purple-900 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="15px"
+                        fill="#FFFFFF">
+                        <path
+                            d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z" />
+                    </svg>
+                </button>
+                <a class="w-full flex justify-center text-white text-sm mt-4">Account</a>
+            </a>
+            <a class="w-full cursor-pointer flex justify-center text-white text-xl mt-4" href="/">Home</a>
+            <a class="w-full cursor-pointer flex justify-center text-white text-xl mt-4">Geners</a>
+            <a class="w-full cursor-pointer flex justify-center text-white text-xl mt-4">Year</a>
+
+        </nav>
+
+
+
+
+
+
+        <!-- movie content holder -->
+
+
+
+        <!-- <div class="relative h-fit">
+            <div class="absolute bg-black bg-opacity-80"></div> -->
+        <div class="relative h-fit">
+            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+            <div class="movie_details_holder bg-cover bg-no-repeat bg-opacity-0 bg-center">
+                <a href=""></a>
+
+            </div>
+        </div>
+
+    </header>
+    <!-- footer -->
+    <footer class="w-full  text-gray-400 py-12 static " style=" background-color: rgb(27, 39, 43);">
+
+        <div class="container mx-auto px-4">
+            <div class="w-full flex flex-col md:flex-row space-y-5 md:space-x-5 justify-around ">
+                <!-- About Section -->
+                <div class="w-full md:col-span-2 md:w-1/2">
+                    <h6 class="text-white text-lg font-semibold uppercase tracking-widest mb-4">About</h6>
+                    <p class="text-justify text-gray-400">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo cum quia natus a ea aut, nostrum
+                        perspiciatis ratione blanditiis dolore vitae vero repellat facilis voluptate numquam quisquam,
+                        reprehenderit voluptatum nemo qui hic nam in quas consequuntur? Sed fugit magnam ex?
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2 flex flex-col sm:flex-row space-y-5 sm:justify-around">
+                    <!-- Categories Section -->
+                    <div>
+                        <h6 class="text-white text-lg font-semibold uppercase tracking-widest mb-4">Categories</h6>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-blue-500">HOME</a></li>
+                            <li><a href="#" class="hover:text-blue-500">MOVIES</a></li>
+                            <li><a href="#" class="hover:text-blue-500">SERIES</a></li>
+                            <li><a href="#" class="hover:text-blue-500">GENERS</a></li>
+                            <li><a href="#" class="hover:text-blue-500">LANGUAGES</a></li>
+                            <li><a href="#" class="hover:text-blue-500">YEAR</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Quick Links Section -->
+                    <div>
+                        <h6 class="text-white text-lg font-semibold uppercase tracking-widest mb-4">Quick Links</h6>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-blue-500">About Us</a></li>
+                            <li><a href="#" class="hover:text-blue-500">Contact Us</a></li>
+                            <li><a href="#" class="hover:text-blue-500">Contribute</a></li>
+                            <li><a href="#" class="hover:text-blue-500">Privacy Policy</a></li>
+                            <li><a href="#" class="hover:text-blue-500">Sitemap</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-gray-600 my-6" />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 items-center">
+                <p class="text-gray-500 text-sm md:text-left text-center">
+                    Copyright &copy; 2025 All Rights Reserved by Filmy Fusion.
+                </p>
+                <ul class="flex justify-center md:justify-end space-x-4 mt-4 md:mt-0">
+                    <li><a href="#"
+                            class="bg-gray-700 hover:bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center"><i
+                                class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"
+                            class="bg-gray-700 hover:bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center"><i
+                                class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"
+                            class="bg-gray-700 hover:bg-pink-500 text-white rounded-full w-10 h-10 flex items-center justify-center"><i
+                                class="fab fa-dribbble"></i></a></li>
+                    <li><a href="#"
+                            class="bg-gray-700 hover:bg-blue-800 text-white rounded-full w-10 h-10 flex items-center justify-center"><i
+                                class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+
+    </footer>
+    <script>
+        const movieId = "<%= mvid %>";
+        // console.log("Movie ID:", movieId);
+
+        let sidenav = document.querySelector(".vertical_nav");
+        const menubtn = document.querySelector(".menu");
+        const crossbtn = document.querySelector(".cross");
+        const movie_holder = document.querySelector(".movie_details_holder")
+        const forms = document.querySelectorAll("form")
+
+        // let movieId = 1138194;
+        // const api_key = "api_key=9e9824f5a403e7682f6d8e0ba13d08b8"
+        // const base_url = "https://api.themoviedb.org/3/movie/"
+        const img_url = "https://image.tmdb.org/t/p/w500"
+
+
+        movie_details()
+
+
+        async function movie_details() {
+            let movie_data = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=9e9824f5a403e7682f6d8e0ba13d08b8`)
+            let movie = await movie_data.json()
+            // console.log(movie)
+            movie_holder.innerHTML = ""
+            const movie_div = document.createElement("div")
+            // movie_div.classList.add("movie_details")
+            movie_holder.style.backgroundImage = `url(${img_url + movie.backdrop_path})`
+            movie_div.innerHTML = `
+    <div class="w-full relative pb-10 flex justify-center">
+             <div class="info  flex flex-col w-11/12 items-center mt-4 sm:w-1/2 top-12">
+                    <img src=${img_url + movie.poster_path} class="h-80 border rounded-md border-blue-500" alt="">
+                    <div class="title text-white mt-5 text-5xl text-center font-bold">${movie.title}<div>
+                            <div class="tagline text-white mt-3 text-xs text-center font-bold">${movie.tagline}
+                            </div>
+                            <div class="flex justify-center flex-wrap">
+                                <div class="flex mx-2 items-center ">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#8C1AF6">
+                                        <path
+                                            d="m378-337 102-78 102 78-38-124 114-91H521l-41-126-40 126H302l115 91-39 124ZM243-144l90-291L96-624h291l93-288 93 288h291L627-435l90 291-237-180-237 180Zm237-364Z" />
+                                    </svg>
+                                    <div class="rating p-1 bg-yellow-500 text-center cursor-pointer text-xs m-2 rounded font-medium ">
+                                        ${movie.vote_average.toFixed(2)}
+                                    </div>
+
+                                </div>
+                                <div class="flex mx-2 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#4B77D1">
+                                        <path
+                                            d="M324-168h312v-120q0-65-45.5-110.5T480-444q-65 0-110.5 45.5T324-288v120Zm156-348q65 0 110.5-45.5T636-672v-120H324v120q0 65 45.5 110.5T480-516ZM192-96v-72h60v-120q0-59 28-109.5t78-82.5q-49-32-77.5-82.5T252-672v-120h-60v-72h576v72h-60v120q0 59-28.5 109.5T602-480q50 32 78 82.5T708-288v120h60v72H192Zm288-72Zm0-624Z" />
+                                    </svg>
+                                    <div class="dt text-white text-xs bg-violet-600 rounded p-1 cursor-pointer m-2">${movie.runtime} min</div>
+                                </div>
+                                <div class="flex m-2 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#5084C1">
+                                        <path
+                                            d="M480-96q-79 0-149-30t-122.5-82.5Q156-261 126-331T96-480q0-80 30-149.5t82.5-122Q261-804 331-834t149-30q80 0 149.5 30t122 82.5Q804-699 834-629.5T864-480q0 79-30 149t-82.5 122.5Q699-156 629.5-126T480-96Zm0-75q17-17 34-63.5T540-336H420q9 55 26 101.5t34 63.5Zm-91-10q-14-30-24.5-69T347-336H204q29 57 77 97.5T389-181Zm182 0q60-17 108-57.5t77-97.5H613q-7 47-17.5 86T571-181ZM177-408h161q-2-19-2.5-37.5T335-482q0-18 .5-35.5T338-552H177q-5 19-7 36.5t-2 35.5q0 18 2 35.5t7 36.5Zm234 0h138q2-20 2.5-37.5t.5-34.5q0-17-.5-35t-2.5-37H411q-2 19-2.5 37t-.5 35q0 17 .5 35t2.5 37Zm211 0h161q5-19 7-36.5t2-35.5q0-18-2-36t-7-36H622q2 19 2.5 37.5t.5 36.5q0 18-.5 35.5T622-408Zm-9-216h143q-29-57-77-97.5T571-779q14 30 24.5 69t17.5 86Zm-193 0h120q-9-55-26-101.5T480-789q-17 17-34 63.5T420-624Zm-216 0h143q7-47 17.5-86t24.5-69q-60 17-108 57.5T204-624Z" />
+                                    </svg>
+                                    <div class=" text-white text-xs bg-blue-800 rounded cursor-pointer p-1 m-2">English</div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center flex-wrap">
+                                <div class=" text-white text-xs bg-blue-800 cursor-pointer rounded p-1 m-2">Action</div>
+                                <div class=" text-white text-xs bg-blue-800 cursor-pointer rounded p-1 m-2">Thriller</div>
+                                <div class=" text-white text-xs bg-blue-800 cursor-pointer rounded p-1 m-2">Drama</div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="tagline text-white mb-3 text-2xl text-center font-bold">Overview</div>
+                        <div class="tagline text-white flex flex-wrap  text-xs text-center font-bold">${movie.overview}</div>
+
+
+
+
+
+
+                    </div>
+                </div>        
+            </div>
+    `
+            movie_holder.appendChild(movie_div)
+        }
+
+
+
+        // responsive navbar
+        sidenav.style.display = "none"
+        function openSidenav() {
+            sidenav.style.display = "flex";
+            menubtn.style.display = "none";
+            crossbtn.style.display = "flex";
+            console.log("closed")
+        }
+
+        function closeSidenav() {
+            sidenav.style.display = "none";
+            menubtn.style.display = "flex";
+            crossbtn.style.display = "none";
+            console.log("closed")
+        }
+        function openclose_sidenav() {
+            if (sidenav.style.display === "none") {
+                openSidenav()
+
+            }
+            // if(sidenav.style.display = "flex"){
+            //     closeSidenav()
+            // }
+            else {
+                closeSidenav()
+            }
+        }
+
+        //search bar
+        forms.forEach((form) => {
+            form.addEventListener("submit", (e) => {
+                e.preventDefault()
+                let searchinput = form.querySelector("input").value
+                // let search_url = base_url + "search/movie?" + api_key + "&query=" + searchinput
+                // movies(search_url)
+                // window.location.href = `http://192.168.224.150:3000/search/${searchinput}`
+                // window.location.href = `http://localhost:3000/search/${searchinput}`
+                // form.href = `/search/${searchinput}`
+                window.location.href = `/search/${searchinput}`
+            })
+        })
+
+
+        console.log("hello")
+
+    </script>
+
+
+</body>
+
+</html>
